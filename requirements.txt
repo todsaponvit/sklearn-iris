@@ -1,5 +1,2 @@
 pandas
-polars
-duckdb
-pylint
-black==25.1.0
+scikit-learn==1.7.2
