@@ -1,0 +1,5 @@
+pandas
+polars
+duckdb
+pylint
+black==25.1.0

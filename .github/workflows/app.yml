@@ -1,0 +1,26 @@
+name: Run Python Script
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Python script pandas
+        run: python test-pandas.py
+
+      - name: Run Python script plars
+        run: python test-polars.py
