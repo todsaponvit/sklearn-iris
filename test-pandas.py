@@ -39,5 +39,11 @@ model
 
 model.fit(X_train, y_train)
 
-print(model.score(X_train, y_train))
+print("Score of model in Train Dataset", model.score(X_train, y_train))
+
+print("Score of model in Test Dataset", model.score(X_test, y_test))
+
+print("Predict: ", model.predict([[3, 4, 5, 6]]))
+
+
 
