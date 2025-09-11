@@ -26,6 +26,18 @@ X_train, X_test, y_train, y_test = train_test_split(
     random_state=7,
 )
 
-print(X_train)
+print(X_train.head())
 
+print(y_train.head())
+
+print(X_test.head())
+
+print(y_test.head())
+
+model = KNeighborsClassifier(n_neighbors=5)
+model
+
+model.fit(X_train, y_train)
+
+print(model.score(X_train, y_train))
 
