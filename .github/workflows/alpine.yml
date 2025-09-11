@@ -1,7 +1,7 @@
 # .github/workflows/main.yml
 name: CI
 
-# on: [push]
+on: [push]
 
 jobs:
   build:
@@ -16,5 +16,11 @@ jobs:
       - name: Run a command in Alpine
         run: |
           echo 'Hello from Alpine!'
-          cat /etc/os-release
-          apk update
+      - uses: jirutka/setup-alpine@v1
+        with:
+          branch: v3.15
+
+      - run: cat /etc/alpine-release
+        shell: alpine.sh {0}
+
+          
