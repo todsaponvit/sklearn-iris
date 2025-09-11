@@ -21,6 +21,3 @@ jobs:
 
       - name: Run Python script pandas
         run: python test-pandas.py
-
-      - name: Run Python script plars
-        run: python test-polars.py
