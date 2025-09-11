@@ -1,0 +1,18 @@
+# .github/workflows/main.yml
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Alpine
+        uses: jirutka/setup-alpine@v1
+        with:
+          # Optional: Specify Alpine version
+          alpine-version: 3.19
+      - name: Run a command in Alpine
+        run: |
+          alpine-chroot sh -c "echo 'Hello from Alpine!'"
