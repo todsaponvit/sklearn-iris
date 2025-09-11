@@ -16,3 +16,5 @@ jobs:
       - name: Run a command in Alpine
         run: |
           echo 'Hello from Alpine!'
+          cat /etc/os-release
+          apk update
