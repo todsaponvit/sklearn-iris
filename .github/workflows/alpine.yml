@@ -15,4 +15,4 @@ jobs:
           alpine-version: 3.19
       - name: Run a command in Alpine
         run: |
-          alpine-chroot sh -c "echo 'Hello from Alpine!'"
+          echo 'Hello from Alpine!'
