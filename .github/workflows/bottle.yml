@@ -1,0 +1,17 @@
+name: test-1
+
+permissions:
+  contents: write
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: run script
+        run: 
+          curl -O "https://cache.bottlerocket.aws/root.json"
+          sha512sum -c <<<"4fcb272345fd6adb94d4c04834400548178fecb57407ca79bc2c3d20e0428fc9ed3a82cea268d7f9c667b5803524a4f465acd701a86953d5d732bf6ecb064888  root.json"
